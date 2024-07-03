@@ -1,5 +1,4 @@
 import { defineComponents } from '@tylertech/forge'
-import '@tylertech/forge/dist/forge.css';
 
 defineComponents();
 
