@@ -29,16 +29,16 @@ function App() {
         <aside>
           <forge-list navlist>
             <forge-list-item selected>
-              <forge-icon slot="start" name="inbox"></forge-icon>
-              <a href="#">Inbox</a>
+              <forge-icon slot="start" name="authority"></forge-icon>
+              <a href="#">Authority</a>
             </forge-list-item>
             <forge-list-item>
               <forge-icon slot="start" name="send"></forge-icon>
-              <a href="#">Outgoing</a>
+              <a href="#">Categories</a>
             </forge-list-item>
             <forge-list-item>
               <forge-icon slot="start" name="drafts"></forge-icon>
-              <a href="#">Drafts</a>
+              <a href="#">View Types</a>
             </forge-list-item>
             <forge-list-item>
               <forge-icon slot="start" name="send"></forge-icon>
@@ -84,10 +84,31 @@ function App() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </p>
-        </forge-card>
-
-        <forge-card>
-        <forge-calendar view="month"></forge-calendar>
+          <forge-button variant="raised">Show Dialog</forge-button>
+          <forge-dialog
+            aria-labelledby="dialog-title"
+            aria-describedby="dialog-message"
+          >
+            <forge-scaffold>
+              <forge-toolbar slot="header" no-divider>
+                <h1 class="forge-typography--heading4" id="dialog-title" slot="start">
+                  Title text
+                </h1>
+                <forge-icon-button slot="end" aria-label="Close dialog">
+                  <forge-icon name="close"></forge-icon>
+                </forge-icon-button>
+              </forge-toolbar>
+              <p slot="body" id="dialog-message">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed
+                pariatur error repellendus eos! Quas, optio esse ad illum quis
+                blanditiis rerum quia. Corrupti, ad hic velit praesentium voluptatum
+                dolores?
+              </p>
+              <forge-toolbar slot="footer" no-divider>
+                <forge-button slot="end" variant="raised">Close</forge-button>
+              </forge-toolbar>
+            </forge-scaffold>
+          </forge-dialog>
         </forge-card>
       </main>
       <forge-footer slot="footer">
